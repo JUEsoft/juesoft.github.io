@@ -1,995 +1,509 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-<title>Portfolio | Emmanuel Emejulu</title>
-
+<title>Emmanuel Emejulu | Portfolio</title>
 <meta charset="UTF-8">
-
-<meta name="description" content="Portfolio">
-
+<meta name="description" content="Emmanuel Emejulu's Portfolio">
 <meta name="keywords" content="HTML, CSS, JS">
-
 <meta name="author" content="Emmanuel Emejulu">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">    
-
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>    
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link rel="icon" href="https://media-exp1.licdn.com/dms/image/C4D03AQECLObbW1kZTQ/profile-displayphoto-shrink_800_800/0?e=1596067200&v=beta&t=ItikUtPwNV-tYbImabXGWIfiDqGOgjhOutylHPA9TLQ">
-
 <style type="text/css">
-
    body{
-
        margin :0;
-
        padding :0;
-
        scroll-behaviour:smooth;
-
        overflow-x:hidden;
-
        background-color: #131414;
-
    }
-
    #portfolio{
-
        display: none;
-
    }
-
     #sidebar{
-
         position: fixed;
-
         top: 10;
-
         height:100%;
-
         border-radius:0px;
-
         width: 200px;
-
         left: -250px;
-
         transition: left 500ms linear;    
-
         background: #131414;
-
         box-shadow: inset 5px 5px 10px #080808, 
-
                   inset -5px -5px 10px #1e2020;
-
         z-index:1;
-
     }
-
     .list{
-
         position: absolute;
-
         left: 0;
-
         margin-top: 20px;
-
     }
-
     .list ul{
-
         display: inline-block;
-
     }
-
     .list ul li{
-
         list-style-type: none;
-
         width: 50px;
-
         margin-left:10px;
-
         text-align:justify;
-
         margin-top: 20px;
-
         font-size: 12px;
-
         font-family: Trebuchet MS;
-
         text-transform: uppercase;
-
     }
-
     .list ul li:hover{
-
          font-size:16px;
-
          font-weight: bold;
-
     }
-
     #toggle{
-
         position: relative;
-
         top: 20px;
-
         left:270px;    
-
     }
-
     .line{
-
         height: 3px;
-
         width:25px;
-
         background-color:#FFFFFF;
-
         display: block;
-
         margin:5px 0px;
-
         cursor: pointer;    
-
     }
-
     #sidebar.active{
-
         left:0px;
-
     }
-
     .item{
-
         text-decoration: none;
-
         color: white;
-
     }
-
     #home,#about,#skills,#project,#contact{
-
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-
         justify-content: center;
-
         height: 550px;
-
         background-color: #131414;
-
     }
-
     .profile-card{
-
         height: 410px;
-
         width: 250px;
-
         display: flex;
-
         flex-direction: column;
-
         align-items: center;
-
         justify-content: flex-end;
-
         border-radius: 20px;
-
         background: #131414;
-
         box-shadow: inset 5px 5px 14px #0c0c0c, 
-
                     inset -5px -5px 14px #1a1c1c;
-
     }
-
     .profile{
-
       margin-top:40px;
-
       width: 130px;
-
       border-radius: 50%;
-
       overflow: hidden;
-
       background: #131414;
-
       box-shadow: inset 17px 17px 35px #0c0c0c, 
-
                   inset -17px -17px 35px #1a1c1c;
-
     }
-
     .profile img{
-
       width: 100%;
-
       height: 100%;
-
       border-radius: 50%;
-
       background: #131414;
-
       box-shadow: inset 17px 17px 35px #0c0c0c, 
-
             inset -17px -17px 35px #1a1c1c;
-
     }
-
     .profile-card h3{
-
       font-size: 16px;
-
       color: #ffffff;
-
       font-family:verdana;
-
       text-transform: uppercase;
-
     }
-
     .profile-card p{
-
     margin-top: -10px;
-
     font-size: 15px;
-
     font-family:arial;
-
     color: #ffffff;
-
     font-weight: normal;
-
     }
-
     .profile-card .follow{
-
       color:#cdcdcd;
-
       width: 100px;
-
       border: 0px;
-
       text-decoration:none;
-
       text-align:center;
-
       border-radius: 5px;
-
       font-family:arial;
-
       font-weight: normal;
-
       text-transform: capitalize;
-
       padding: 10px 30px 10px 30px;
-
       background: #131414;
-
      box-shadow: inset 10px 10px 20px #080808, 
-
             inset -10px -10px 20px #1e2020;
-
     }
-
     .profile-card button:hover{
-
       background-color:#000000;
-
       border: 2px solid #000000;
-
       font-weight: bolder;
-
     }
-
     .profile-card ul{
-
       list-style-type: none;
-
       display: inline-flex; 
-
     }
-
     .profile-card li{
-
      text-align: center;
-
      margin:20px 20px 20px 0px;
-
     }
-
     .fa-linkedin,.fa-twitter,.fa-github{      
-
       color: white;
-
       padding: 10px;
-
       width: 30px;
-
       height:30px;
-
       border-radius: 50%;
-
       border-radius: 50px;
-
       background: #131414;
-
        box-shadow: inset 10px 10px 20px #080808, 
-
             inset -10px -10px 20px #1e2020;
-
     }
-
    .profile-card button:hover,.fa-linkedin:hover,.fa-twitter:hover,.fa-github:hover{
-
         background-color: #000000;
-
     }
-
     .fa-github{
-
         text-align:center;
-
         width:35px;
-
     }
-
     .fa-email{
-
     text-align:center;
-
     width:35px;
-
     }
-
     .about-text{
-
       margin-top:-50px;
-
       width:70vw;
-
       height: auto;
-
       font-size:15px;
-
       font-family:arial;
-
       text-align: justify;
-
       text-transform:capitalize ;
-
       padding: 50px 30px 10px 30px;
-
       color: white;    
-
       border-radius: 5px;  
-
           background: #131414;
-
       box-shadow: inset 36px 36px 72px #080909, 
-
             inset -36px -36px 72px #1e1f1f;
-
     }
-
     #skills{
-
       display: flex;
-
       flex-direction: column;
-
       justify-content: center;
-
       align-items: center;
-
     }
-
     .skill-flex{
-
       padding: 10px;
-
       margin-top: 0px;
-
       margin-left:10px;
-
       width:80vw;
-
       background: #131414;
-
       box-shadow: inset 5px 5px 10px #080909, 
-
                   inset -5px -5px 10px #1e1f1f;
-
     }
-
     .skill-flex .title{
-
       font-weight: normal;
-
       font-size:15px;
-
       text-transform: uppercase;
-
       background-color: transparent;
-
       color:white;
-
       margin: 10px;
-
       padding: 10px;
-
       font-family:Arial;
-
     }
-
     .skill{ 
-
       width:auto;
-
       padding:10px;
-
       margin: 10px;
-
       color: black;
-
       font-size: 12px;
-
       font-weight: bolder;
-
       border-radius: 2px;      
-
       border-radius: 10px;
-
       text-transform: uppercase;
-
       background:white;
-
       font-family:Arial;
-
       color:#2d2d2d;
-
     }
-
       .topic{
-
       position:relative;
-
       text-align:center;
-
       text-transform: uppercase;
-
       color:#FFFFFF;
-
       font-family:Arial,sans-serif;
-
       font-size:larger;
-
       font-weight:bolder;
-
       }
-
     .contact-flex{
-
       display: flex;
-
       align-items: center;
-
       flex-direction: column;      
-
       justify-content: center;
-
       background-color: black;
-
       padding: 10px 40px 10px 40px;
-
       border-radius: 5px; 
-
       background: #131414;
-
       box-shadow: inset 5px 5px 14px #0c0c0c, 
-
                   inset -5px -5px 14px #1a1c1c;
-
              width:70vw;
-
        margin-top:-20px;
-
     }
-
     .contact-flex input[type="text"],.contact-flex input[type="email"],.contact-flex textarea{
-
       border: 0px;
-
       width: 100%;
-
       height: 30px;
-
       margin-top: 10px;
-
       border-radius:3px;
-
       padding-left: 10px;      
-
     }
-
     .contact-flex h4{
-
       color: white;
-
       font-size: 20px; 
-
       text-transform: capitalize;
-
     }
-
     ::placeholder{
-
       color: black;
-
       font-family:Arial;
-
       color:#888888;
-
     }
-
     .contact-flex textarea{
-
       height: 150px;
-
       padding-left: 10px;
-
     }
-
     .contact-flex input[type="submit"]{
-
       border: 0px;
-
       margin-top: 10px;
-
       border-radius: 5px;     
-
       padding: 10px 20px;
-
       font-weight: bolder;
-
       font-family: sans-serif;
-
       color:white;
-
       text-transform: capitalize;
-
            background: #131414;
-
      box-shadow: inset 10px 10px 20px #080808, 
-
             inset -10px -10px 20px #1e2020;
-
     }
-
     .code-flex{
-
       display: flex;
-
       overflow-x: auto;
-
       padding:20px;
-
       width: 260px;
-
       padding-right: 30px;
-
       border-radius: 10px;
-
       background: #131414;
-
       box-shadow: inset 5px 5px 14px #0c0c0c, 
-
                   inset -5px -5px 14px #1a1c1c;
-
     }
-
     .item{
-
      border-radius:10px;
-
       min-width: 300px;
-
       height: 300px;
-
       padding-top: 20px;
-
     }
-
     .codeflex img{
-
       margin-left: 20px;
-
       
-
        box-shadow: inset 5px 5px 10px #080808, 
-
             inset -5px -5px 10px #1e2020;
-
     }
-
     #p-loader{
-
         position: absolute;
-
         top: 30%;
-
         left: 30%;
-
         right: 50%;
-
         transform: translate(-50%,-50%);
-
         margin:10px;
-
         border: 13px solid #131414;
-
         border-radius: 50%;
-
         border-top: 13px solid  white;
-
         border-right: 13px solid  white;
-
         border-bottom: 13px solid  white;
-
         width: 100px;
-
         height: 100px;
-
         color: white;
-
         -webkit-animation: rp 0.1s linear infinite;
-
         animation: rp 0.1s linear infinite;
-
         box-shadow: inset 10px 10px 20px #080808, 
-
             inset -10px -10px 20px #1e2020;
-
         }
-
     @-webkit-keyframes rp{
-
     0% {-webkit-transform: rotate(0deg);}
-
       100% { -webkit-transform:
-
       rotate(360deg); }
-
     }
-
 @keyframes rp{
-
   0% { transform: rotate(0deg); }
-
   100% { transform: rotate(360deg); }
-
 }
-
+footer{
+position:relative;
+color:#FFFFFF;
+font-family:monospace;
+bottom:0px;
+text-align:center;
+}
 </style>
-
 <script type="text/javascript">
-
+    window.onload = function(){
+    var foot = document.querySelector("footer");
+    var d = new Date();
+    var yr = d.getFullYear();
+    foot.innerHTML = "&copy"+yr+" JUEsoft INC";
+    }
     function togglesidebar(){
-
         document.querySelector("#sidebar").style.left="0px";
-
         document.querySelector("#toggle").style.left="50px";
-
         document.querySelector("#sidebar").classList.toggle("active");
-
         document.querySelector("#toggle").style.display="none";
-
     
 
-
-
     }
-
     function hidenav(){
-
         document.querySelector("#sidebar").style.left="-200px";
-
         document.querySelector("#toggle").style.left="210px";
-
         document.querySelector("#toggle").style.display="block";
-
     }
-
     function start(){
-
        myVar = setTimeout(displayp, 2000);
-
        document.querySelector('input[type=submit]').addEventListener('click', function(){
-
        Swal.fire({
-
        type:'error',
-
        title:'ERROR!',
-
-       text:'Sorry, there was an unsuspected error while submitting your request',
-
+       text:'Sorry, there was an unexpected error while submitting your request',
        footer:'<b>Please try again another time</b>'
-
        });
-
        });
-
     }
-
     function displayp(){
-
      Swal.fire({
-
      type:'info',
-
      title:'HI',
-
      text:'Welcome To My Portfolio'
-
      });
-
     document.getElementById("p-loader").style.display = "none";
-
     document.getElementById("portfolio").style.display = "block";
-
     AOS.init({
-
         duration: 1000
-
     })
-
     }
-
 </script>
-
 </head>
-
 <body onload="start()">
-
 <div id="portfolio">
-
       <div id="sidebar">
-
         <span style='font-size:15px;color: white;float: right;margin: 10px;cursor: pointer;' onclick="hidenav();">&#10006;</span>
-
           <div class="list">
-
            
-
              <ul>
-
               <li><a href="#home" class ="item" onclick="hidenav()">Home</a></li>
-
               <li><a href="#about"  class="item" onclick="hidenav()">About </a></li>
-
               <li><a href="#skills" class="item" onclick="hidenav()">skills</a></li>
-
               <li><a href="#project" class="item" onclick="hidenav()">code</a></li>
-
               <li><a href="#contact" class="item" onclick="hidenav()">Contact</a></li>
-
              </ul>
-
           </div>
-
           <div id="toggle" onclick="togglesidebar()">
-
               <span class="line" id="line"></span>
-
               <span class="line"></span>
-
               <span class="line"></span>
-
           </div>
-
       </div>
 
-
-
 <div id="home" >
-
     <div class="profile-card"   data-aos="zoom-out">
-
                 <div class="profile" >
-
                   <img src="https://media-exp1.licdn.com/dms/image/C4D03AQECLObbW1kZTQ/profile-displayphoto-shrink_800_800/0?e=1596067200&v=beta&t=ItikUtPwNV-tYbImabXGWIfiDqGOgjhOutylHPA9TLQ">
-
                 </div>
-
                
-
                 <h3>Emmanuel Emejulu</h3>
-
                 <p>Anambra State, Nigeria.   </p>
-
                  <a href="mailto: emmanueljunior433@gmail.com" class="follow"><i class="fa fa-envelope"></i></a>
 
-
-
                
-
                 <ul class="profile-social-links">
-
                         <li>
-
                           <a href="https://GitHub.com/emejuluweb">
-
                            <i class="fa fa-github" style="font-size:25px;padding-top:10px;padding-left:10px;"></i>
-
                           </a>
-
                         </li>
-
                         <li>
-
                           <a href="https://www.twitter.com/emejuluCodes">
-
                             <i class="fa fa-twitter" style="font-size:30px;color: white;"></i>
-
                           </a>
-
                         </li>
-
                         
-
                         <li>
-
                           <a href="https://www.linkedin.com/mwlite/in/emmanuel-emejulu-a7747b195">
-
                            <i class="fa fa-linkedin" style="font-size:30px;"></i>
-
                           </a>
-
                         </li>
-
                 </ul>
-
     
-
           </div>
-
          
-
 </div>
-
-
-
 
 
 <div id="about">
-
      <div class="about-text" data-aos="zoom-out">
-
            <p class="topic">ABOUT ME</p>
-
            <p>i'm Emmanuel Emejulu a 16yr old self-taught web and app developer from ojoto, Anambra State, Nigeria. I'm a grade 11 student at Okongwu Memorial Grammar School Nnewi, Anambra State, Nigeria. I currently live with my parents now and available as a freelancer and remote works as a web or app developer.</p>
-
           
-
      </div>
-
 </div>
-
-
-
 
 
 <div id="skills">
-
      <div class="skill-flex" data-aos="zoom-out">
-
               <p class="topic">MY SKILLS</p>
-
               <p class="title">programming</p>
-
               <p class="skill">Python / Java / C++</p>
-
               <p class="title">Web development</p>
-
               <p class="skill">html / css / JavaScript / Jquery / react</p>
-
               <p class="title">App development</p>
-
               <p class="skill">java / kotlin / flutter / react native</p>
-
       </div>
-
 </div>
-
 <div id="project">
-
     <p class="topic">PROJECTS</p>
-
     <div class="code-flex" data-aos="zoom-out">
-
       
-
       <div class="item">
-
-       <a href="https://code.sololearn.com/WFEsBcBHnmKR/#html"><img src="file:///storage/emulated/0/pictures/Facebook/FB_IMG_15902777550951432.jpg" height="270px" width="230px" style="margin-left: 20px"></a>
-
+       <a href="https://code.sololearn.com/WblzEyCS287R/?ref=app"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQof9X0Zp6Ep69OAVtoyqxskdCCW91FVkiSoXA1V-RQiDpF7htWzZM2lNX6&s=10" height="270px" width="230px" style="margin-left: 20px"></a>
         
-
       </div>
-
        <div class="item">
-
-        <a href="https://code.sololearn.com/W1zu0WSyZwgX/#html"><img src="file:///storage/emulated/0/pictures/Facebook/FB_IMG_15902777550951432.jpg" height="270px" width="250px"></a>
-
+        <a href="https://code.sololearn.com/WLra25Au7yn2/?ref=app"><img src="https://media.istockphoto.com/photos/colored-christmas-glittering-balls-and-decorations-picture-id859108396" height="270px" width="250px"></a>
         
-
       </div>
-
        <div class="item">
-
-        <a href="https://code.sololearn.com/W8q408mZf5YO/#html"><img src="file:///storage/emulated/0/pictures/Facebook/FB_IMG_15902777550951432.jpg" height="270px" width="250px"></a>
-
+        <a href="https://code.sololearn.com/Wo07Yu3zQ4DP/?ref=app"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbefmJLo9UA6x6gJUYzB4hjEk5ps7BxhjlPMU28xoeLMIkKsXI&usqp=CAU" height="270px" width="250px"></a>
          
-
       </div>
-
        <div class="item">
-
-        <a href="https://code.sololearn.com/WsGD6g5IWj65/#html"> <img src="file:///storage/emulated/0/pictures/Facebook/FB_IMG_15902777550951432.jpg" height="270px" width="240px" style="margin-left: 30px;"></a>
-
+        <a href="https://code.sololearn.com/WN4M57PZ66DB/?ref=app"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFB1JcO-6ZoJFZUmmWc78OZfeOqV9Haeu-TUH4EUy3vn8bu7bW&usqp=CAU" height="270px" width="240px" style="margin-left: 30px;"></a>
       </div>
-
-      <div class="item">
-
-      <a href="https://code.sololearn.com/WaXk8uog8AH8/#html"><img src="file:///storage/emulated/0/pictures/Facebook/FB_IMG_15902777550951432.jpg" height="270px" width="240px" style="margin-left: 30px;"></a>
-
-      </div>
-
     </div>
-
 </div>
-
 <div id="contact">
-
     <div class="contact-flex" data-aos="zoom-out">
-
             <h4>Get In Touch</h4>
-
             <input type="text" name="" placeholder="Name">
-
             <input type="email" name="" placeholder="Email">
-
             <textarea placeholder="Message or Comment"></textarea>
-
             <input type="submit" name="">
-
           </div>
-
 </div>
-
+<footer></footer>
 </div>
-
 <div id="p-loader"></div>
-
 </body>
-
 </html>

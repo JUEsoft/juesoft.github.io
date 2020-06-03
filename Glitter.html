@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>Glittering</title>
+<style>
+body{
+padding:10px 10px;
+margin:0;
+/*
+background:linear-gradient(rgb(50,20,40) 30%,rgb(47,206,180));
+background:-webkit-linear-gradient(rgb(50,20,40) 10%,rgb(47,206,180));
+background:-moz-linear-gradient(rgb(50,20,40) 30%,rgb(47,206,180));
+background:-o-linear-gradient(rgb(50,20,40) 30%,rgb(47,206,180));
+*/}
+#glitterBox{
+width:100%;
+height:300px;
+padding:10px 2px 0;
+box-sizing:content-box;
+border:2px solid grey;
+box-shadow:0 0 3px;
+}
+#glitter{
+box-sizing:border-box;
+width:15px;
+height:15px;
+border-radius:50px;
+background:yellow;
+margin:0 0 10px;
+box-shadow:0 0 5px red;
+animation: glit 0.5s infinite linear;
+-webkit-animation: glit 0.5s infinite linear;
+-moz-animation: glit 0.5s infinite linear;
+-o-animation: glit 0.5s infinite linear;
+}
+#glitter2{
+position:relative;
+box-sizing:border-box;
+width:15px;
+height:15px;
+border-radius:50px;
+background:red;
+margin:0 0 10px;
+left:15%;
+top:-100%;
+box-shadow:0 0 5px red;
+animation: glit 0.8s infinite linear;
+-webkit-animation: glit 0.8s infinite linear;
+-moz-animation: glit 0.8s infinite linear;
+-o-animation: glit 0.8s infinite linear;
+}
+#glitter3{
+position:relative;
+box-sizing:border-box;
+width:15px;
+height:15px;
+border-radius:50px;
+background:silver;
+margin:0 0 10px;
+left:30%;
+top:-200%;
+box-shadow:0 0 5px red;
+animation: glit 1s infinite linear;
+-webkit-animation: glit 1s infinite linear;
+-moz-animation: glit 1s infinite linear;
+-o-animation: glit 1s infinite linear;
+}
+#glitter4{
+position:relative;
+box-sizing:border-box;
+width:15px;
+height:15px;
+border-radius:50px;
+background:green;
+margin:0 0 10px;
+left:45%;
+top:-300%;
+box-shadow:0 0 5px red;
+animation: glit 1.3s infinite linear;
+-webkit-animation: glit 1.3s infinite linear;
+-moz-animation: glit 1.3s infinite linear;
+-o-animation: glit 1.3s infinite linear;
+}
+#glitter5{
+position:relative;
+box-sizing:border-box;
+width:15px;
+height:15px;
+border-radius:50px;
+background:fuchsia;
+margin:0 0 10px;
+left:60%;
+top:-400%;
+box-shadow:0 0 5px red;
+animation: glit 1.5s infinite linear;
+-webkit-animation: glit 1.5s infinite linear;
+-moz-animation: glit 1.5s infinite linear;
+-o-animation: glit 1.5s infinite linear;
+}
+#glitter6{
+position:relative;
+box-sizing:border-box;
+width:15px;
+height:15px;
+border-radius:50px;
+background:aqua;
+margin:0 0 10px;
+left:75%;
+top:-500%;
+box-shadow:0 0 5px red;
+animation: glit 1.8s infinite linear;
+-webkit-animation: glit 1.8s infinite linear;
+-moz-animation: glit 1s infinite linear;
+-o-animation: glit 1s infinite linear;
+}
+#glitter7{
+position:relative;
+box-sizing:border-box;
+width:15px;
+height:15px;
+border-radius:50px;
+background:navy;
+margin:0 0 10px;
+left:90%;
+top:-600%;
+box-shadow:0 0 5px red;
+animation: glit 2s infinite linear;
+-webkit-animation: glit 2s infinite linear;
+-moz-animation: glit 1s infinite linear;
+-o-animation: glit 1s infinite linear;
+}
+@keyframes glit{
+1%{box-shadow:0 0 2px red;}
+10%{box-shadow:0 0 20px green;}
+20%{box-shadow:0 0 20px blue;}
+30%{box-shadow:0 0 20px yellow;background:red;}
+50%{box-shadow:0 0 20px red;}
+100%{box-shadow:0 0 2px red;}
+}
+@-webkit-keyframes glit{
+1%{box-shadow:0 0 2px red;}
+10%{box-shadow:0 0 20px green;}
+20%{box-shadow:0 0 20px blue;}
+30%{box-shadow:0 0 20px yellow;background:red;}
+50%{box-shadow:0 0 20px red;}
+100%{box-shadow:0 0 2px red;}
+}
+@-moz-keyframes glit{
+1%{box-shadow:0 0 2px red;}
+10%{box-shadow:0 0 20px green;}
+20%{box-shadow:0 0 20px blue;}
+30%{box-shadow:0 0 20px yellow;background:red;}
+50%{box-shadow:0 0 20px red;}
+100%{box-shadow:0 0 2px red;}
+}
+@-o-keyframes glit{
+1%{box-shadow:0 0 2px red;}
+10%{box-shadow:0 0 20px green;}
+20%{box-shadow:0 0 20px blue;}
+30%{box-shadow:0 0 20px yellow;background:red;}
+50%{box-shadow:0 0 20px red;}
+100%{box-shadow:0 0 2px red;}
+}
+</style>
+</head>
+<body>
+<div id="glitterBox">
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter2">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter3">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter4">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter5">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter6">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+ <div id="glitter7">
+ </div>
+</div>
+</body>
+</html>

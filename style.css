@@ -1,0 +1,336 @@
+   body{
+       margin :0;
+       padding :0;
+       scroll-behaviour:smooth;
+       overflow-x:hidden;
+       background-color: #131414;
+   }
+   #portfolio{
+       display: none;
+   }
+    #sidebar{
+        position: fixed;
+        top: 10;
+        height:100%;
+        border-radius:0px;
+        width: 200px;
+        left: -250px;
+        transition: left 500ms linear;    
+        background: #131414;
+        box-shadow: inset 5px 5px 10px #080808, 
+                  inset -5px -5px 10px #1e2020;
+        z-index:1;
+    }
+    .list{
+        position: absolute;
+        left: 0;
+        margin-top: 20px;
+    }
+    .list ul{
+        display: inline-block;
+    }
+    .list ul li{
+        list-style-type: none;
+        width: 50px;
+        margin-left:10px;
+        text-align:justify;
+        margin-top: 20px;
+        font-size: 12px;
+        font-family: Trebuchet MS;
+        text-transform: uppercase;
+    }
+    .list ul li:hover{
+         font-size:16px;
+         font-weight: bold;
+    }
+    #toggle{
+        position: relative;
+        top: 20px;
+        left:270px;    
+    }
+    .line{
+        height: 3px;
+        width:25px;
+        background-color:#FFFFFF;
+        display: block;
+        margin:5px 0px;
+        cursor: pointer;    
+    }
+    #sidebar.active{
+        left:0px;
+    }
+    .item{
+        text-decoration: none;
+        color: white;
+    }
+    #home,#about,#skills,#project,#contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 550px;
+        background-color: #131414;
+    }
+    .profile-card{
+        height: 410px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 20px;
+        background: #131414;
+        box-shadow: inset 5px 5px 14px #0c0c0c, 
+                    inset -5px -5px 14px #1a1c1c;
+    }
+    .profile{
+      margin-top:40px;
+      width: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #131414;
+      box-shadow: inset 17px 17px 35px #0c0c0c, 
+                  inset -17px -17px 35px #1a1c1c;
+    }
+    .profile img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #131414;
+      box-shadow: inset 17px 17px 35px #0c0c0c, 
+            inset -17px -17px 35px #1a1c1c;
+    }
+    .profile-card h3{
+      font-size: 16px;
+      color: #ffffff;
+      font-family:verdana;
+      text-transform: uppercase;
+    }
+    .profile-card p{
+    margin-top: -10px;
+    font-size: 15px;
+    font-family:arial;
+    color: #ffffff;
+    font-weight: normal;
+    }
+    .profile-card .follow{
+      color:#cdcdcd;
+      width: 100px;
+      border: 0px;
+      text-decoration:none;
+      text-align:center;
+      border-radius: 5px;
+      font-family:arial;
+      font-weight: normal;
+      text-transform: capitalize;
+      padding: 10px 30px 10px 30px;
+      background: #131414;
+     box-shadow: inset 10px 10px 20px #080808, 
+            inset -10px -10px 20px #1e2020;
+    }
+    .profile-card button:hover{
+      background-color:#000000;
+      border: 2px solid #000000;
+      font-weight: bolder;
+    }
+    .profile-card ul{
+      list-style-type: none;
+      display: inline-flex; 
+    }
+    .profile-card li{
+     text-align: center;
+     margin:20px 20px 20px 0px;
+    }
+    .fa-linkedin,.fa-twitter,.fa-github{      
+      color: white;
+      padding: 10px;
+      width: 30px;
+      height:30px;
+      border-radius: 50%;
+      border-radius: 50px;
+      background: #131414;
+       box-shadow: inset 10px 10px 20px #080808, 
+            inset -10px -10px 20px #1e2020;
+    }
+   .profile-card button:hover,.fa-linkedin:hover,.fa-twitter:hover,.fa-github:hover{
+        background-color: #000000;
+    }
+    .fa-github{
+        text-align:center;
+        width:35px;
+    }
+    .fa-email{
+    text-align:center;
+    width:35px;
+    }
+    .about-text{
+      margin-top:-50px;
+      width:70vw;
+      height: auto;
+      font-size:15px;
+      font-family:arial;
+      text-align: justify;
+      text-transform:capitalize ;
+      padding: 50px 30px 10px 30px;
+      color: white;    
+      border-radius: 5px;  
+          background: #131414;
+      box-shadow: inset 36px 36px 72px #080909, 
+            inset -36px -36px 72px #1e1f1f;
+    }
+    #skills{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .skill-flex{
+      padding: 10px;
+      margin-top: 0px;
+      margin-left:10px;
+      width:80vw;
+      background: #131414;
+      box-shadow: inset 5px 5px 10px #080909, 
+                  inset -5px -5px 10px #1e1f1f;
+    }
+    .skill-flex .title{
+      font-weight: normal;
+      font-size:15px;
+      text-transform: uppercase;
+      background-color: transparent;
+      color:white;
+      margin: 10px;
+      padding: 10px;
+      font-family:Arial;
+    }
+    .skill{ 
+      width:auto;
+      padding:10px;
+      margin: 10px;
+      color: black;
+      font-size: 12px;
+      font-weight: bolder;
+      border-radius: 2px;      
+      border-radius: 10px;
+      text-transform: uppercase;
+      background:white;
+      font-family:Arial;
+      color:#2d2d2d;
+    }
+      .topic{
+      position:relative;
+      text-align:center;
+      text-transform: uppercase;
+      color:#FFFFFF;
+      font-family:Arial,sans-serif;
+      font-size:larger;
+      font-weight:bolder;
+      }
+    .contact-flex{
+      display: flex;
+      align-items: center;
+      flex-direction: column;      
+      justify-content: center;
+      background-color: black;
+      padding: 10px 40px 10px 40px;
+      border-radius: 5px; 
+      background: #131414;
+      box-shadow: inset 5px 5px 14px #0c0c0c, 
+                  inset -5px -5px 14px #1a1c1c;
+             width:70vw;
+       margin-top:-20px;
+    }
+    .contact-flex input[type="text"],.contact-flex input[type="email"],.contact-flex textarea{
+      border: 0px;
+      width: 100%;
+      height: 30px;
+      margin-top: 10px;
+      border-radius:3px;
+      padding-left: 10px;      
+    }
+    .contact-flex h4{
+      color: white;
+      font-size: 20px; 
+      text-transform: capitalize;
+    }
+    ::placeholder{
+      color: black;
+      font-family:Arial;
+      color:#888888;
+    }
+    .contact-flex textarea{
+      height: 150px;
+      padding-left: 10px;
+    }
+    .contact-flex input[type="submit"]{
+      border: 0px;
+      margin-top: 10px;
+      border-radius: 5px;     
+      padding: 10px 20px;
+      font-weight: bolder;
+      font-family: sans-serif;
+      color:white;
+      text-transform: capitalize;
+           background: #131414;
+     box-shadow: inset 10px 10px 20px #080808, 
+            inset -10px -10px 20px #1e2020;
+    }
+    .code-flex{
+      display: flex;
+      overflow-x: auto;
+      padding:20px;
+      width: 260px;
+      padding-right: 30px;
+      border-radius: 10px;
+      background: #131414;
+      box-shadow: inset 5px 5px 14px #0c0c0c, 
+                  inset -5px -5px 14px #1a1c1c;
+    }
+    .item{
+     border-radius:10px;
+      min-width: 300px;
+      height: 300px;
+      padding-top: 20px;
+    }
+    .codeflex img{
+      margin-left: 20px;
+      
+       box-shadow: inset 5px 5px 10px #080808, 
+            inset -5px -5px 10px #1e2020;
+    }
+    #p-loader{
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        right: 50%;
+        transform: translate(-50%,-50%);
+        margin:10px;
+        border: 13px solid #131414;
+        border-radius: 50%;
+        border-top: 13px solid  white;
+        border-right: 13px solid  white;
+        border-bottom: 13px solid  white;
+        width: 100px;
+        height: 100px;
+        color: white;
+        -webkit-animation: rp 0.1s linear infinite;
+        animation: rp 0.1s linear infinite;
+        box-shadow: inset 10px 10px 20px #080808, 
+            inset -10px -10px 20px #1e2020;
+        }
+    @-webkit-keyframes rp{
+    0% {-webkit-transform: rotate(0deg);}
+      100% { -webkit-transform:
+      rotate(360deg); }
+    }
+@keyframes rp{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+footer{
+position:relative;
+color:#FFFFFF;
+font-family:monospace;
+bottom:0px;
+text-align:center;
+}

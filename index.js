@@ -36,4 +36,7 @@
      });
     document.getElementById("p-loader").style.display = "none";
     document.getElementById("portfolio").style.display = "block";
+    AOS.init({
+        duration: 1000
+    })
     }

@@ -313,8 +313,8 @@
         width: 100px;
         height: 100px;
         color: white;
-        -webkit-animation: rp 0.1s linear infinite;
-        animation: rp 0.1s linear infinite;
+        -webkit-animation: rp 0.5s linear infinite;
+        animation: rp 0.5s linear infinite;
         box-shadow: inset 10px 10px 20px #080808, 
             inset -10px -10px 20px #1e2020;
         }

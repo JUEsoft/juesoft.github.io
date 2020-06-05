@@ -38,5 +38,5 @@
     document.getElementById("portfolio").style.display = "block";
     AOS.init({
         duration: 1000
-    })
+    });
     }

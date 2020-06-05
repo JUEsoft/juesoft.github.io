@@ -18,8 +18,6 @@
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
-<script src="index.js" >
-<script src="AOS.json" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="canonical" href="http://"media-exp1.licdn.com/dms/image/C4D03AQECLObbW1kZTQ/profile-displayphoto-shrink_800_800/0?e=1596067200&v=beta&t=ItikUtPwNV-tYbImabXGWIfiDqGOgjhOutylHPA9TLQ"/>
 <link rel="icon" href="https://media-exp1.licdn.com/dms/image/C4D03AQECLObbW1kZTQ/profile-displayphoto-shrink_800_800/0?e=1596067200&v=beta&t=ItikUtPwNV-tYbImabXGWIfiDqGOgjhOutylHPA9TLQ">
@@ -361,6 +359,50 @@ bottom:0px;
 text-align:center;
 }
 </style>
+<script>
+    window.onload = function(){
+    var foot = document.querySelector("footer");
+    var d = new Date();
+    var yr = d.getFullYear();
+    foot.innerHTML = "&copy"+yr+" JUEsoft INC";
+    }
+    function togglesidebar(){
+        document.querySelector("#sidebar").style.left="0px";
+        document.querySelector("#toggle").style.left="50px";
+        document.querySelector("#sidebar").classList.toggle("active");
+        document.querySelector("#toggle").style.display="none";
+    
+
+    }
+    function hidenav(){
+        document.querySelector("#sidebar").style.left="-200px";
+        document.querySelector("#toggle").style.left="210px";
+        document.querySelector("#toggle").style.display="block";
+    }
+    function start(){
+       myVar = setTimeout(displayp, 2000);
+       document.querySelector('input[type=submit]').addEventListener('click', function(){
+       Swal.fire({
+       type:'error',
+       title:'ERROR!',
+       text:'Sorry, there was an unexpected error while submitting your request',
+       footer:'<b>Please try again another time</b>'
+       });
+       });
+    }
+    function displayp(){
+     Swal.fire({
+     type:'info',
+     title:'HI',
+     text:'Welcome To My Portfolio'
+     });
+    document.getElementById("p-loader").style.display = "none";
+    document.getElementById("portfolio").style.display = "block";
+    AOS.init({
+        duration: 1000
+    })
+    }
+</script>
 </head>
 <body onload="start()">
 <div id="portfolio">
